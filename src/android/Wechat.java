@@ -208,15 +208,15 @@ public class Wechat extends CordovaPlugin {
             final JSONObject params = args.getJSONObject(0);
 
             req.appId = getAppId();
-            req.partnerId = params.getString("mch_id");
-            req.prepayId = params.getString("prepay_id");
-            req.nonceStr = params.getString("nonce");
+            req.partnerId = params.getString("partnerid");
+            req.prepayId = params.getString("prepayid");
+            req.nonceStr = params.getString("noncestr");
             req.timeStamp = params.getString("timestamp");
             req.sign = params.getString("sign");
             req.packageValue = "Sign=WXPay";
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
-
+            
             callbackContext.error(ERROR_INVALID_PARAMETERS);
             return true;
         }

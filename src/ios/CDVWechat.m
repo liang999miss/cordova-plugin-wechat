@@ -130,7 +130,7 @@
     }
     
     // check required parameters
-    for (NSString *key in @[@"mch_id", @"prepay_id", @"timestamp", @"nonce", @"sign"])
+    for (NSString *key in @[@"partnerid", @"prepayid", @"timestamp", @"noncestr", @"sign"])
     {
         if (![params objectForKey:key])
         {
@@ -140,10 +140,10 @@
     }
     
     PayReq *req = [[PayReq alloc] init];
-    req.partnerId = params[@"mch_id"];
-    req.prepayId = params[@"prepay_id"];
+    req.partnerId = params[@"partnerid"];
+    req.prepayId = params[@"prepayid"];
     req.timeStamp = [params[@"timestamp"] intValue];
-    req.nonceStr = params[@"nonce"];
+    req.nonceStr = params[@"noncestr"];
     req.package = @"Sign=WXPay";
     req.sign = params[@"sign"];
 

@@ -76,7 +76,7 @@ module.exports = {
     /**
      * Send a payment request
      *
-     * @link https://pay.weixin.qq.com/wiki/doc/api/app.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/app.php?chapter=9_12&index=2
      * @example
      * <code>
      * var params = {
